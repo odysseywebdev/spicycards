@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spicy Cards Online</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .title {
+            background-color: #BFECFF;
+            color: #CDC1FF;
+            font-size: 48px;
+            font-weight: bold;
+            padding: 50px 0;
+            width: 100vw;
+        }
+        .section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+        }
+        .classic {
+            background-color: #CDC1FF;
+        }
+        .couples {
+            background-color: #BFECFF;
+        }
+        .solo {
+            background-color: #CDC1FF;
+        }
+        .category-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .category-box {
+            padding: 15px 25px;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 240px;
+            height: 260px;
+            background-color: #FFCCEA;
+        }
+        .nav-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .nav-box {
+            padding: 15px 30px;
+            background: white;
+            color: black;
+            border-radius: 15px;
+            border: 2px solid white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .new-card-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">SPICY CARDS ONLINE</div>
+    <div class="nav-boxes">
+        <div class="nav-box" onclick="scrollToSection('classic')">CLASSIC MODE</div>
+        <div class="nav-box" onclick="scrollToSection('couples')">COUPLES</div>
+        <div class="nav-box" onclick="scrollToSection('solo')">SOLO</div>
+    </div>
+
+    <!-- Classic Mode -->
+    <div id="classic" class="section classic">
+        <h2>CLASSIC MODE</h2>
+        <p>How to Play: Classic mode requires 2 players, Him & Her. <br>You and your partner will choose from categories that you want, or all of them<br>You will act out what's on the card, you can click next card if you don't like or want to move onto the next card</p>
+        <h3>For Him</h3>
+        <div class="category-row">
+            <div class="category-box" id="tease-him" onclick="newCard('tease-him')">Tease<p>Tease your partner</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="foreplay-him" onclick="newCard('foreplay-him')">Foreplay<p>Build anticipation</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="sex-him" onclick="newCard('sex-him')">Sex<p>Take action</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="spicy-him" onclick="newCard('spicy-him')">Spicy<p>Turn up the heat</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="toy-him" onclick="newCard('toy-him')">Toy<p>Incorporate a toy</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="finish-him" onclick="newCard('finish-him')">Finish<p>Finish the moment</p><button class="new-card-btn">New Card</button></div>
+        </div>
+
+        <h3>For Her</h3>
+        <div class="category-row">
+            <div class="category-box" id="tease-her" onclick="newCard('tease-her')">Tease<p>Tease your partner</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="foreplay-her" onclick="newCard('foreplay-her')">Foreplay<p>Build anticipation</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="sex-her" onclick="newCard('sex-her')">Sex<p>Take action</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="spicy-her" onclick="newCard('spicy-her')">Spicy<p>Turn up the heat</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="toy-her" onclick="newCard('toy-her')">Toy<p>Incorporate a toy</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="finish-her" onclick="newCard('finish-her')">Finish<p>Finish the moment</p><button class="new-card-btn">New Card</button></div>
+        </div>
+    </div>
+
+    <!-- Couples Section -->
+    <div id="couples" class="section couples">
+        <h2>COUPLES</h2>
+        <p>How to Play: Couples gamemode requires 2 players <br> Choose from each category or all <br> Follow the instructions on each card, click new card once you have acted out the instructions, or don't like the card</p>
+        <div class="category-row">
+            <div class="category-box" id="roleplay" onclick="newCard('roleplay')">Roleplay<p>Become someone new</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="fantasy" onclick="newCard('fantasy')">Fantasy<p>Explore your deepest desires</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="questions" onclick="newCard('questions')">Questions<p>Ask thought-provoking questions</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="dares" onclick="newCard('dares')">Dares<p>Dare your partner</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="couples-scenarios" onclick="newCard('couples-scenarios')">Couples Scenarios<p>Create spicy scenarios</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="outfits" onclick="newCard('outfits')">Outfits<p>Choose a sexy outfit</p><button class="new-card-btn">New Card</button></div>
+        </div>
+    </div>
+
+    <!-- Solo Section -->
+    <div id="solo" class="section solo">
+        <h2>SOLO</h2>
+        <p>How to Play: Solo Gamemode only requires 1 player <br> Click new card to get an instruction</p>
+        <div class="category-row">
+            <div class="category-box" id="solo-him" onclick="newCard('solo-him')">Solo Him<p>Solo challenges for him</p><button class="new-card-btn">New Card</button></div>
+            <div class="category-box" id="solo-her" onclick="newCard('solo-her')">Solo Her<p>Solo challenges for her</p><button class="new-card-btn">New Card</button></div>
+        </div>
+    </div>
+
+    <script>
+        // JSON data for the cards in each category
+        const cardData = {
+            "tease-him": ["Slow Kiss – Start with a soft, lingering kiss, teasing your partner by pulling away just as things begin to heat up, building anticipation with every touch.",
+                          "Passionate Massage – Gently rub her back, shoulders, or neck, taking your time and occasionally letting your hands wander, teasing her senses with light caresses.",
+                          "Whispered Dirty Talk – Whisper naughty words in her ear, slowly escalating the intensity as you speak, sending shivers down her spine with every sultry sentence.",
+                          "Teasing Touches – Run your fingers lightly over her skin, tracing her body in slow, deliberate movements, never quite touching the places she’s longing for.",
+                          "Playful Flirting – Compliment her with a playful edge, teasing her about how irresistible she looks, making her feel desired without giving in too soon.",
+                          "Breathless Kisses – Kiss her deeply but only for a few moments before pulling away, leaving her breathless and wanting more with each time you stop.",
+                          "Slow Stripping – Slowly undress in front of her, teasing her with every movement, making her wait for the moment when you finally reveal yourself.",
+                          "Light Tease with Clothing – Have her remove a piece of clothing only to tease her by leaving just a little to the imagination, building anticipation with every inch.",
+                          "Intense Eye Contact – Lock eyes with her while you tease her with your hands or mouth, letting your gaze speak volumes and heighten the tension between you.",
+                          "Caressing Her Thighs – Run your fingers along her thighs, getting closer and closer to where she wants it most, then pulling back just as she starts to crave more.",
+                          "Shirtless Tease – Remove your shirt slowly in front of her, revealing your body inch by inch, watching her reaction as she imagines what’s next.",
+                          "Playful Tease with Ice – Run an ice cube along her skin, leaving cold trails behind before warming her up with your hands, teasing her with both the cool and heat.",
+                          "Dirty Texting – Send her flirty or naughty messages throughout the day, teasing her with what’s to come when you’re finally alone together.",
+                          "Neck Kisses & Bites – Slowly kiss her neck, then gently bite or nibble her skin, teasing her with just the right amount of pressure, watching her squirm.",
+                          "Gentle Pinching – Lightly pinch or tug on her skin, like her earlobe or nipple, with just the right amount of pressure to make her body tingle.",
+                          "Light Spanking – Give her a playful, light spank on her bottom, teasing her with each tap while you watch the way her body reacts to your touch.",
+                          "Body Tracing – Trace your fingertips along her body, touching every curve without rushing, building up the anticipation for the next move.",
+                          "Teasing with Compliments – Tell her how amazing she looks, describing in detail how beautiful she is, but holding back on giving her the attention she really craves.",
+                          "Kissing Her Bare Skin – Kiss along her exposed skin, avoiding the most intimate places, teasing her with the promise of more as you get closer and closer.",
+                          "Slow Undressing of Her – Slowly remove her clothes, teasing her with how slowly you undress her, making every button undone or zipper pulled a moment to savor."],
+            "foreplay-him": ["Oral Pleasure – Start slow, kissing her inner thighs before making your way to her most sensitive areas, teasing her with gentle strokes of your tongue and lips.",
+                            "Slow, Deep Kisses – Kiss her deeply and passionately, letting your lips linger on hers before slowly moving to her neck, shoulders, and jawline.",
+                            "Gentle Nipple Play – Take your time with her breasts, lightly kissing, licking, or gently teasing her nipples with your fingers, creating a mix of pleasure and teasing.",
+                            "Light, Sensual Massage – Use oil or lotion to give her a slow, sensual back and shoulder massage, applying just the right amount of pressure to relax and excite her.",
+                            "Neck & Ear Kisses – Slowly kiss and nibble along her neck and ears, finding those sensitive spots that drive her wild, whispering sweet things to her as you go.",
+                            "Slow Tease with Fingers – Gently slide your fingers along her body, tracing every curve and contour, teasing her just enough to make her crave more.",
+                            "Sweet Whispered Words – Whisper compliments and dirty talk in her ear, letting her imagination run wild with the possibilities as you explore her body.",
+                            "Hand on Her Thigh – Rest your hand on her inner thigh, slowly inching closer and closer, but never quite making contact where she wants it most.",
+                            "Eye Contact & Kiss – Hold her gaze as you kiss her deeply, conveying how much you desire her through intense eye contact that builds the connection between you.",
+                            "Hot Breath on Her Skin – Let your breath trail along her body, teasing her skin with your warm breath before your lips follow close behind, sending tingles across her skin.",
+                            "Teasing with Ice & Heat – Slowly run an ice cube along her skin, teasing her with the contrast of the cold, then warm her up with your hands or lips, switching between temperatures.",
+                            "Massage Her Inner Thighs – Give extra attention to the sensitive areas of her thighs, massaging them gently with your fingers while teasing the space just above her hips.",
+                            "Hands in Her Hair – Gently tug at her hair while kissing her neck or lips, allowing the sensation of both pleasure and a bit of control to build the anticipation.",
+                            "Slow, Lingering Touches – Let your hands explore her body slowly, brushing your fingers across her skin in a way that leaves her craving more with every touch.",
+                            "Caress Her Sides – Lightly run your hands along the sides of her torso and waist, teasing her with the softest of touches while creating a slow, steady buildup.",
+                            "Gentle Spanking – Give her a playful, gentle spank on her bottom while kissing her neck or back, mixing a touch of dominance with your tenderness.",
+                            "Teasing with Lips – Kiss her all over her body, avoiding the places where she wants you most, building the desire until she can’t wait for you to touch her there.",
+                            "Exploring Her Sensual Spots – Take your time finding all the spots on her body that make her gasp, from the small of her back to the inside of her wrists and beyond.",
+                            "Slow Tease with Your Clothes – Slowly remove your clothes in front of her, keeping her anticipation high as she imagines what’s under your clothing.",
+                            "Rubbing Her Clit – Gently stroke her clitoris with your fingers, building the intensity at a slow pace, making her body respond to every movement.",
+                            "Licking Her Breasts – Slowly lick around her breasts, teasing her nipples with your tongue before sucking gently, making her body melt under your touch."
+                            ],
+            "sex-him": ["Missionary – Hold her close, gazing into her eyes as you make love to her slowly, feeling every inch of connection while she wraps her legs around you.",
+                        "Doggy Style – Take her from behind, giving her deep, passionate thrusts while she’s supported on all fours, allowing for both control and deep penetration.",
+                        "Standing Sex – Lift her up against the wall or door, her legs wrapped around your waist, while you thrust into her, letting the intensity build as you stand strong together.",
+                        "Cowgirl – Let her take control as she rides you, guiding her own pleasure while you lay back and enjoy the sight and sensation of her on top.",
+                        "Reverse Cowgirl – Watch as she rides you from a different angle, enjoying the view of her movements while you explore her body with your hands and lips.",
+                        "Spooning – Lie behind her as you enter her slowly, taking your time to enjoy the close contact, letting her feel your warmth while you both move together.",
+                        "Edge Play – Take her to the brink of orgasm, slowing down or stopping just as she gets close, making her beg for release before you give her what she craves.",
+                        "Rough Sex – Grab her hips firmly, pulling her towards you with quick, hard thrusts, mixing passion with a little bit of roughness while keeping an eye on her pleasure.",
+                        "Roleplay – Take on a fantasy persona, whether it's a dominant lover, a stranger, or someone else, adding a layer of intensity and excitement to your lovemaking.",
+                        "Oral Sex – Pleasure her with your mouth, using your tongue and lips to tease, lick, and suck her most sensitive spots, getting her closer to orgasm.",
+                        "Deep Thrusting – Take her deeper and harder, ensuring each thrust is slow but deliberate, making sure every inch of your body feels connected to hers.",
+                        "Anal Sex – Slowly and carefully enter her backdoor, making sure to go at a pace she’s comfortable with, adding a layer of intimacy and different sensation to your connection.",
+                        "Sex in the Shower – Stand under the water, slipping in and out of her, as the steam and warmth of the water intensify the sensations of your bodies pressed together.",
+                        "Missionary with Legs Up – Hold her legs over your shoulders, pushing deeper into her while she experiences every inch of you with the change in angle.",
+                        "Threesome – Explore the dynamics of pleasure with another partner, switching between intimate moments and heightened arousal as you all take part in the experience.",
+                        "Bondage – Lightly tie her wrists or legs, keeping her in place as you take control, pushing her boundaries while ensuring she feels safe and loved.",
+                        "Breeding Play – Let her feel you deep inside her as you imagine the primal urge of filling her, adding intensity and connection to your physical bond.",
+                        "Choking – Lightly place your hand around her neck as you kiss and thrust, adding a sense of control and danger while maintaining her pleasure and consent.",
+                        "Sensual Touching – Use your hands to explore her body as you make love, focusing on feeling her skin, caressing her curves, and enhancing the connection with every touch.",
+                        "Sex Against the Window – Take her up against the window, feeling the thrill of being exposed while you move together, as the view adds a layer of excitement to your passion.",
+                        "G-Spot Stimulation – Use your fingers or a toy to stimulate her G-spot while you make love to her, giving her the deepest pleasure possible as you both move together."
+                        ],
+            "spicy-him": ["Rough Sex – Take control with hard, passionate thrusts, making her feel the intensity as you dominate the rhythm, leaving her begging for more.",
+                        "Edge Play – Bring her to the brink of orgasm, then pull back, teasing her with gentle touches and denying her release until she can't take it any longer.",
+                        "Choking – Lightly wrap your hand around her neck as you kiss her, heightening the sense of control while maintaining her pleasure, creating a dangerous yet intimate dynamic.",
+                        "Hair Pulling – Grab a handful of her hair as you thrust into her, using it to guide her movements and add intensity, making her feel both vulnerable and turned on.",
+                        "Face Sitting – Let her take control for a change by sitting on your face, grinding against you as you pleasure her with your mouth, making her moan in ecstasy.",
+                        "Spanking – Give her a playful smack on her ass, followed by slow, teasing caresses, as you switch between hard and soft touches to keep her on edge.",
+                        "Anal Play – Gently introduce a finger or toy into her backdoor, taking it slow while adding new sensations to her experience, teasing her with both tenderness and intensity.",
+                        "Public Play – Engage in risky play in a semi-public place, like a secluded corner, where the thrill of being almost caught drives the passion between you.",
+                        "Dirty Talk – Whisper filthy words in her ear, making her squirm with desire as you describe exactly what you want to do to her, keeping her on the edge of anticipation.",
+                        "Roleplay – Play out a hot, taboo fantasy, whether you're a strict teacher, a sexy boss, or a dominating stranger, immersing her in a scenario that turns her on.",
+                        "Sex Toys – Introduce a vibrator or dildo into your play, using it alongside your own body to intensify the sensations as you pleasure her in new ways.",
+                        "Biting – Leave soft, teasing bites on her neck, shoulders, or breasts, as you explore her body, adding a sharp contrast between pain and pleasure.",
+                        "Domination & Submission – Take charge in the bedroom, binding her wrists or controlling her movements, creating a power dynamic that drives both of you wild.",
+                        "Quickies – Have a passionate, intense quickie when the mood strikes, not giving her much time to think but making every moment feel urgent and incredibly hot.",
+                        "Rough Kissing – Kiss her aggressively, pressing her lips with urgency, making her feel the passion in every moment as you move between hard and soft kisses.",
+                        "Reverse Cowgirl – Let her ride you while you hold her hips and guide her, letting her feel empowered as you both enjoy the pleasure of deep, rhythmic thrusts.",
+                        "Dirty Dancing – Grind against her slowly, letting the rhythm of your bodies build as you tease and pleasure her with every movement, feeling the heat rise.",
+                        "Sex in the Shower – Take her in the shower, slipping inside her as the water cascades over you both, making every touch slippery and more intense as the steam surrounds you."
+                        ],
+            "toy-him": ["Male Vibrator – Let your partner use a vibrating toy on you, starting on your shaft and moving up to your sensitive areas, feeling the pulses intensify as she explores different speeds.",
+                        "Realistic Pussy – Use a realistic pussy toy, stroking and thrusting into it while your partner watches or helps, creating a hot visual and physical experience as you lose yourself in the sensation.",
+                        "Dildo Play – Introduce a dildo during foreplay or sex, having your partner guide it into you or using it together while she rides you, adding extra depth and fullness.",
+                        "Cock Ring – Slip a cock ring around your base before starting, letting your partner tease and pleasure you while the ring adds pressure, intensifying both sensation and your stamina.",
+                        "Prostate Massager – Let your partner slowly work a prostate massager into you, feeling the deep internal stimulation as she gently rocks it in and out, bringing you to new heights of pleasure.",
+                        "Vibrating Butt Plug – Try a vibrating butt plug with your partner’s help, allowing the toy to tease and build your excitement, sending waves of pleasure throughout your body as she controls the vibration intensity.",
+                        "Double-Ended Dildo – Use a double-ended dildo with your partner, either thrusting together or having her take the other end, creating shared sensations that bring you closer together.",
+                        "Penis Pump – Use a penis pump to gently expand your erection before starting, with your partner watching or helping, making the experience more intimate and building anticipation for sex.",
+                        "Fleshlight – Incorporate a Fleshlight into your play, either using it alone or letting your partner take control and stroke you as she watches, teasing you with her touch and reactions.",
+                        "Bondage & Toy Play – Combine light bondage with toys, like using restraints to hold your hands back while your partner teases you with a vibrator or dildo, heightening your desire and submission.",
+                        "Clitoral Stimulator – While you pleasure yourself, let your partner use a clitoral stimulator to tease her, building the intensity for both of you as you get closer to climax.",
+                        "Vibrating Cock Sleeve – Slip a vibrating cock sleeve onto your shaft while you make love to your partner, enhancing your pleasure as it vibrates inside her, giving both of you an extra sensation.",
+                        "Anal Beads – Let your partner slowly insert anal beads into you during foreplay, tugging on them gently to increase your sensitivity as she manipulates the beads and heightens the buildup.",
+                        "Sex Machine – Use a sex machine together, positioning it on your bed and letting the toy do the thrusting while your partner watches or gets involved, guiding it or adding her own touch to intensify the pleasure.",
+                        "Vibrating Ring – Try a vibrating ring, worn at the base of your penis during sex, while your partner rides you or takes the lead, feeling the vibrations intensify both of your sensations.",
+                        "Remote-Controlled Toy – Let your partner control a remote-controlled toy, like a vibrating plug, teasing you in public or in a private setting, keeping you on edge while she dictates the intensity.",
+                        "Sex Toy Blindfolded Play – Blindfold yourself while your partner uses toys on you, relying on touch and sound to heighten your pleasure and anticipation, making each sensation feel more intense."
+                      ],
+            "finish-him": ["Cum in Your Partner’s Mouth – Let your partner take you in their mouth, finishing in their mouth and feeling the warmth as they swallow your release.",
+                          "Cum on Your Partner’s Face – Stand over your partner and explode on their face, watching them take in your cum as it drips down their skin.",
+                          "Cum Inside Your Partner – Push deep inside your partner, letting yourself cum inside them, feeling the intense connection as you fill them up.",
+                          "Cum on Your Partner’s Vagina – Stroke your cock over your partner’s vagina, letting yourself cum on their body, watching your release cover them.",
+                          "Cum on Your Partner’s Stomach – Stroke yourself to the edge and cum on your partner’s stomach, enjoying the view as your cum pools on their skin.",
+                          "Cum on Your Partner’s Back – Stroke to the edge, then explode on your partner’s back, feeling the release as you let go of all control.",
+                          "Cum on Your Partner’s Ass – Tease your partner’s ass and then cum on it, watching as your cum lands on their smooth skin.",
+                          "Cum on Your Partner’s Feet – Get close and cum on your partner’s feet, feeling your release splatter over their toes as they watch you.",
+                          "Cum on Your Partner’s Thigh – Let your cock pulse as you cum on your partner’s thigh, feeling your release run down their skin.",
+                          "Cum on Your Partner’s Boobs – Finish yourself off on your partner’s boobs, watching the cum coat their chest as they play with your release.",
+                          "Cum on Your Partner’s Hand – Have your partner stroke you, and then cum in their hand, feeling their grip as they guide you to release.",
+                          "Kneeling or Standing, Cum on Your Partner – Get on top of your partner, either kneeling or standing, and let yourself cum on their body.",
+                          "Cum Where Your Partner Wants It – Let your partner decide where they want you to cum, following their lead and finishing where they command.",
+                          "Your Partner Tells You to Cum, No Touching – Your partner watches you, teasing you to the edge, then tells you to cum, with no help, just pure control.",
+                          "Handjob by Your Partner, They Choose When & Where You Cum – Let your partner give you a handjob and decide when and where you explode, building anticipation.",
+                          "Blowjob by Your Partner, They Decide When & Where You Cum – Your partner takes you in their mouth, letting them decide the perfect moment for you to cum deep in their throat.",
+                          "Cum While Standing Up – Stand up while you stroke yourself, feeling the rush as you cum standing, letting your release spill over your body.",
+                          "Your Partner Milks You While You’re on Your Knees – Get on your knees while your partner strokes you to climax, either from the front or behind, feeling them guide your release.",
+                          "Face Each Other, Handjob & Makeout – Face your partner and kiss deeply while they give you a handjob, both of you feeling the passion as you finish together.",
+                          "Your Partner Sits Up, You Cum Between Their Legs – Your partner sits with their legs open, and you kneel between them, letting them guide you to finish in their control.",
+                          "Your Partner Makes You Cum Their Way, Then Keeps Going – Let your partner decide how to make you cum, and once you explode, they keep going for one minute more, intensifying the pleasure.",
+                          "Edge and Explode – Your partner edges you twice, stopping just before you cum, then on the third try, they let you explode uncontrollably.",
+                          "Cum on Yourself, Stomach or Anywhere Else – Let your partner guide you as you cum on yourself, either on your stomach or anywhere else they desire.",
+                          "Footjob by Your Partner, Until You Explode – Let your partner give you a footjob, the pressure building until you finally explode, feeling the pleasure in their touch.",
+                          "Wear a Condom, Cum Inside It – Put on a condom and let yourself cum inside it, feeling the tightness and warmth as your release is captured.",
+                          "Remove the Condom Just Before You Cum, Finish Inside Your Partner – If you’re wearing a condom, your partner instructs you to take it off just before you cum, finishing inside them for the final connection.",
+                          "Cum on Your Partner’s Lingerie – If your partner is wearing lingerie, finish on their outfit, watching how your release drips over the fabric as they tease you."],
+
+            "tease-her": [
+                "Tease your partner with a playful touch.",
+                "Leave a note with a naughty hint.",
+                "Give your partner a surprise kiss."
+            ],
+            "foreplay-her": [
+                "Gently trace your fingers along your partner’s neck.",
+                "Give her a slow, passionate kiss.",
+                "Whisper something romantic into her ear."
+            ],
+            "sex-her": [
+                "Take charge and initiate the next step.",
+                "Guide her to a new position.",
+                "Show her how much you appreciate her."
+            ],
+            "spicy-her": [
+                "Play a spicy game with your partner.",
+                "Try something adventurous and new.",
+                "Increase the intensity with a fun challenge."
+            ],
+            "toy-her": [
+                "Incorporate a toy for added fun.",
+                "Try a new sensation with a toy.",
+                "Use a toy to spice things up."
+            ],
+            "finish-her": [
+                "Finish with an intimate kiss.",
+                "Slowly tease her until the moment arrives.",
+                "End with a loving touch."
+            ],
+            "roleplay": [
+                "Pretend to be a famous celebrity.",
+                "Act out a fantasy scenario.",
+                "Swap roles and become someone else."
+            ],
+            "fantasy": [
+                "Share a secret fantasy.",
+                "Try living out a new fantasy together.",
+                "Talk about your wildest desires."
+            ],
+            "questions": [
+                "What's your most intimate memory?",
+                "What's something you’ve always wanted to try?",
+                "Tell me about a sexy dream you’ve had."
+            ],
+            "dares": [
+                "Dare your partner to give you a passionate kiss.",
+                "Dare your partner to try a new position.",
+                "Dare your partner to tease you for 30 seconds."
+            ],
+            "couples-scenarios": [
+                "Create a fantasy scenario together.",
+                "Roleplay as strangers meeting for the first time.",
+                "Imagine you're on a romantic vacation together."
+            ],
+            "outfits": [
+                "Choose a sexy outfit for a night out.",
+                "Pick an outfit that turns you both on.",
+                "Try a surprise outfit and see your partner's reaction."
+            ],
+            "solo-him": [
+                "Give yourself a compliment.",
+                "Take a moment to appreciate your body.",
+                "Indulge in your favorite sexy fantasy."
+            ],
+            "solo-her": [
+                "Pamper yourself with a relaxing bath.",
+                "Take time to explore your body.",
+                "Dream about your wildest desire."
+            ]
+        };
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({behavior: "smooth"});
+        }
+
+        function newCard(categoryId) {
+            const categoryElement = document.getElementById(categoryId);
+            const cards = cardData[categoryId];
+            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+            categoryElement.querySelector("p").textContent = randomCard;
+        }
+    </script>
+</body>
+</html>
